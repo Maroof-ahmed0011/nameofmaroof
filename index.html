@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center display-4">movie ticket system</h1>
+      <div class="form-group">
+        <label for="exampleInputEmail1">MOVIE NAME</label>
+        <input
+          type="text"
+          class="form-control"
+          id="finp"
+          aria-describedby="emailHelp"
+          placeholder="movie name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Name of persons</label>
+        <input
+          type="text"
+          class="form-control"
+          id="sinp"
+          placeholder="name of persons"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">No of tickets</label>
+        <input
+          type="number"
+          class="form-control"
+          id="tinp"
+          placeholder="no. of tickets"
+        />
+      </div>
+
+      <button onclick="getting()" type="submit" class="btn btn-primary">
+        Submit
+      </button>
+
+      <div class="section_2">
+        <div id="div1" class="div1"></div>
+        <div id="div2" class="div2"></div>
+        <div id="div3" class="div3"></div>
+      </div>
+    </div>
+    <!--section for javasecript-->
+
+    <script>
+      var count = 0;
+      var x1 = [];
+      var y1 = [];
+      var z1 = [];
+      function getting() {
+        var x = document.getElementById("finp");
+        var y = document.getElementById("sinp");
+        var z = document.getElementById("tinp");
+        var pro1 = document.getElementById("div1");
+        var pro2 = document.getElementById("div2");
+        var pro3 = document.getElementById("div3");
+
+        if (x.value == "" || y.value == "" || z.value == "") {
+          alert("fill the empty blanks");
+        } else {
+          x1.push(x.value);
+          y1.push(y.value);
+          z1.push(z.value);
+          x.value = "";
+          y.value = "";
+          z.value = "";
+          pro1.innerHTML = x1;
+          pro2.innerHTML = y1;
+          pro3.innerHTML = z1;
+        }
+      }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
